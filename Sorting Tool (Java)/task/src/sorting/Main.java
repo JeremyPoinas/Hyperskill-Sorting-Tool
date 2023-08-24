@@ -1,14 +1,11 @@
 package sorting;
 
-import java.util.*;
-
 public class Main {
     public static void main(final String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-        while (scanner.hasNextLong()) {
-            long number = scanner.nextLong();
-            // write your code here
-        }
+        String dataType = "-dataType".equals(args[0]) ? args[1] : "word";
+        SortingToolFactory sortingToolFactory = new SortingToolFactory();
+        SortingTool sortingTool = sortingToolFactory.createSortingTool(dataType);
+        sortingTool.sort();
     }
 }
+
