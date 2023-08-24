@@ -4,7 +4,7 @@ import java.io.*;
 import java.util.List;
 
 public class Main {
-    static final String PATH = "C:\\Users\\Jérémy\\IdeaProjects\\Sorting Tool (Java)\\Sorting Tool (Java)\\task\\src\\sorting\\";
+    static final String PATH = System.getProperty("user.dir") + "\\";
     static String dataType;
     static String sortingType;
 
@@ -49,7 +49,7 @@ public class Main {
             sortingType = "natural";
         }
         if (dataType == null) {
-            dataType = "word";
+            dataType = "line";
         }
     }
 

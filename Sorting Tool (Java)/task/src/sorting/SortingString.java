@@ -35,6 +35,7 @@ public class SortingString extends SortingTool {
                 map.put(element, map.getOrDefault(element, 0) + 1);
             }
         }
+        scanner.close();
     }
     @Override
     protected void sortNatural() {
