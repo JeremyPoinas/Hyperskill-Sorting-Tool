@@ -3,16 +3,15 @@ package sorting;
 public class Main {
     public static void main(final String[] args) {
         String dataType = "word";
-        loop: for (int i = 0; i < args.length; i++)
+        String sortingType = "natural";
+        for (int i = 0; i < args.length; i++) {
             switch (args[i]) {
-                case "-sortIntegers" -> {
-                    dataType = "integer";
-                    break loop;
-                }
+                case "-sortingType" -> sortingType = args[i + 1];
                 case "-dataType" -> dataType = args[i + 1];
             }
-        var sortingToolFactory = new SortingToolFactory();
-        SortingTool sortingTool = sortingToolFactory.createSortingTool(dataType);
+        }
+        var sortingContext = new SortingContext(sortingType, dataType);
+        SortingTool sortingTool = sortingContext.createSortingTool();
         sortingTool.sort();
     }
 }
